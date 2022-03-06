@@ -63,6 +63,26 @@ namespace Libre_2022.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_to_database_96px {
+            get {
+                object obj = ResourceManager.GetObject("add_to_database_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Empty_BOX {
+            get {
+                object obj = ResourceManager.GetObject("Empty-BOX", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Librē {
             get {
                 object obj = ResourceManager.GetObject("Librē", resourceCulture);
