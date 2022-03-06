@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Libre_2022
 {
-    public partial class Form1 : Form
+    public partial class dashBoard : Form
     {
-        public Form1()
+        public dashBoard()
         {
             InitializeComponent();
         }

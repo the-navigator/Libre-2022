@@ -1,6 +1,6 @@
 ﻿namespace Libre_2022
 {
-    partial class Form1
+    partial class dashBoard
     {
         /// <summary>
         /// Required designer variable.
@@ -163,7 +163,7 @@
             this.logoBox.TabIndex = 1;
             this.logoBox.TabStop = false;
             // 
-            // Form1
+            // dashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -172,7 +172,7 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "dashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
