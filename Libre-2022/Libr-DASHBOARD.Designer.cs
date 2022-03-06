@@ -34,6 +34,14 @@
             this.dashBoard_searchBTN = new Guna.UI2.WinForms.Guna2Button();
             this.dashBoard_searchTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.logoBox = new System.Windows.Forms.PictureBox();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_issue = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_update_libre = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_subj_browser = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_visit_directory = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_github = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_grade_level_viewer = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_advance_search = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +88,7 @@
             this.dashBoard_exitBTN.CheckedState.Parent = this.dashBoard_exitBTN;
             this.dashBoard_exitBTN.CustomImages.Parent = this.dashBoard_exitBTN;
             this.dashBoard_exitBTN.FillColor = System.Drawing.Color.White;
-            this.dashBoard_exitBTN.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dashBoard_exitBTN.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashBoard_exitBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.dashBoard_exitBTN.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(132)))), ((int)(((byte)(115)))));
             this.dashBoard_exitBTN.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(132)))), ((int)(((byte)(115)))));
@@ -104,7 +112,7 @@
             this.dashBoard_searchBTN.CheckedState.Parent = this.dashBoard_searchBTN;
             this.dashBoard_searchBTN.CustomImages.Parent = this.dashBoard_searchBTN;
             this.dashBoard_searchBTN.FillColor = System.Drawing.Color.White;
-            this.dashBoard_searchBTN.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dashBoard_searchBTN.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashBoard_searchBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
             this.dashBoard_searchBTN.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(170)))), ((int)(((byte)(86)))));
             this.dashBoard_searchBTN.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(170)))), ((int)(((byte)(86)))));
@@ -163,12 +171,212 @@
             this.logoBox.TabIndex = 1;
             this.logoBox.TabStop = false;
             // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "Oops... Looks like something is missing!";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Location = new System.Drawing.Point(592, 752);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.SelectionStart = 40;
+            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Size = new System.Drawing.Size(629, 69);
+            this.guna2TextBox1.TabIndex = 6;
+            this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btn_issue
+            // 
+            this.btn_issue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_issue.Animated = true;
+            this.btn_issue.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.btn_issue.BorderRadius = 12;
+            this.btn_issue.BorderThickness = 2;
+            this.btn_issue.CheckedState.Parent = this.btn_issue;
+            this.btn_issue.CustomImages.Parent = this.btn_issue;
+            this.btn_issue.FillColor = System.Drawing.Color.White;
+            this.btn_issue.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btn_issue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.btn_issue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.btn_issue.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(132)))), ((int)(((byte)(132)))));
+            this.btn_issue.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btn_issue.HoverState.Parent = this.btn_issue;
+            this.btn_issue.Location = new System.Drawing.Point(707, 64);
+            this.btn_issue.MaximumSize = new System.Drawing.Size(166, 48);
+            this.btn_issue.Name = "btn_issue";
+            this.btn_issue.ShadowDecoration.Parent = this.btn_issue;
+            this.btn_issue.Size = new System.Drawing.Size(34, 31);
+            this.btn_issue.TabIndex = 20;
+            // 
+            // btn_update_libre
+            // 
+            this.btn_update_libre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_update_libre.Animated = true;
+            this.btn_update_libre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.btn_update_libre.BorderRadius = 12;
+            this.btn_update_libre.BorderThickness = 2;
+            this.btn_update_libre.CheckedState.Parent = this.btn_update_libre;
+            this.btn_update_libre.CustomImages.Parent = this.btn_update_libre;
+            this.btn_update_libre.FillColor = System.Drawing.Color.White;
+            this.btn_update_libre.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update_libre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.btn_update_libre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(93)))), ((int)(((byte)(125)))));
+            this.btn_update_libre.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(93)))), ((int)(((byte)(125)))));
+            this.btn_update_libre.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btn_update_libre.HoverState.Parent = this.btn_update_libre;
+            this.btn_update_libre.Location = new System.Drawing.Point(526, 64);
+            this.btn_update_libre.Name = "btn_update_libre";
+            this.btn_update_libre.ShadowDecoration.Parent = this.btn_update_libre;
+            this.btn_update_libre.Size = new System.Drawing.Size(177, 31);
+            this.btn_update_libre.TabIndex = 19;
+            this.btn_update_libre.Text = "Update Libre";
+            // 
+            // btn_subj_browser
+            // 
+            this.btn_subj_browser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_subj_browser.Animated = true;
+            this.btn_subj_browser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.btn_subj_browser.BorderRadius = 12;
+            this.btn_subj_browser.BorderThickness = 2;
+            this.btn_subj_browser.CheckedState.Parent = this.btn_subj_browser;
+            this.btn_subj_browser.CustomImages.Parent = this.btn_subj_browser;
+            this.btn_subj_browser.FillColor = System.Drawing.Color.White;
+            this.btn_subj_browser.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_subj_browser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.btn_subj_browser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(172)))), ((int)(((byte)(133)))));
+            this.btn_subj_browser.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(172)))), ((int)(((byte)(133)))));
+            this.btn_subj_browser.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btn_subj_browser.HoverState.Parent = this.btn_subj_browser;
+            this.btn_subj_browser.Location = new System.Drawing.Point(354, 64);
+            this.btn_subj_browser.MaximumSize = new System.Drawing.Size(166, 48);
+            this.btn_subj_browser.Name = "btn_subj_browser";
+            this.btn_subj_browser.ShadowDecoration.Parent = this.btn_subj_browser;
+            this.btn_subj_browser.Size = new System.Drawing.Size(166, 31);
+            this.btn_subj_browser.TabIndex = 18;
+            this.btn_subj_browser.Text = "Subject Browser";
+            // 
+            // btn_visit_directory
+            // 
+            this.btn_visit_directory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_visit_directory.Animated = true;
+            this.btn_visit_directory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.btn_visit_directory.BorderRadius = 12;
+            this.btn_visit_directory.BorderThickness = 2;
+            this.btn_visit_directory.CheckedState.Parent = this.btn_visit_directory;
+            this.btn_visit_directory.CustomImages.Parent = this.btn_visit_directory;
+            this.btn_visit_directory.FillColor = System.Drawing.Color.White;
+            this.btn_visit_directory.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_visit_directory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.btn_visit_directory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(194)))), ((int)(((byte)(196)))));
+            this.btn_visit_directory.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(194)))), ((int)(((byte)(196)))));
+            this.btn_visit_directory.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btn_visit_directory.HoverState.Parent = this.btn_visit_directory;
+            this.btn_visit_directory.Location = new System.Drawing.Point(10, 64);
+            this.btn_visit_directory.MaximumSize = new System.Drawing.Size(166, 48);
+            this.btn_visit_directory.Name = "btn_visit_directory";
+            this.btn_visit_directory.ShadowDecoration.Parent = this.btn_visit_directory;
+            this.btn_visit_directory.Size = new System.Drawing.Size(166, 31);
+            this.btn_visit_directory.TabIndex = 17;
+            this.btn_visit_directory.Text = "Visit Directory";
+            // 
+            // btn_github
+            // 
+            this.btn_github.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_github.Animated = true;
+            this.btn_github.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.btn_github.BorderRadius = 12;
+            this.btn_github.BorderThickness = 2;
+            this.btn_github.CheckedState.Parent = this.btn_github;
+            this.btn_github.CustomImages.Parent = this.btn_github;
+            this.btn_github.FillColor = System.Drawing.Color.White;
+            this.btn_github.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btn_github.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.btn_github.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(108)))), ((int)(((byte)(203)))));
+            this.btn_github.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(108)))), ((int)(((byte)(203)))));
+            this.btn_github.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btn_github.HoverState.Parent = this.btn_github;
+            this.btn_github.Location = new System.Drawing.Point(744, 64);
+            this.btn_github.MaximumSize = new System.Drawing.Size(166, 48);
+            this.btn_github.Name = "btn_github";
+            this.btn_github.ShadowDecoration.Parent = this.btn_github;
+            this.btn_github.Size = new System.Drawing.Size(34, 31);
+            this.btn_github.TabIndex = 16;
+            // 
+            // btn_grade_level_viewer
+            // 
+            this.btn_grade_level_viewer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_grade_level_viewer.Animated = true;
+            this.btn_grade_level_viewer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.btn_grade_level_viewer.BorderRadius = 12;
+            this.btn_grade_level_viewer.BorderThickness = 2;
+            this.btn_grade_level_viewer.CheckedState.Parent = this.btn_grade_level_viewer;
+            this.btn_grade_level_viewer.CustomImages.Parent = this.btn_grade_level_viewer;
+            this.btn_grade_level_viewer.FillColor = System.Drawing.Color.White;
+            this.btn_grade_level_viewer.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_grade_level_viewer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.btn_grade_level_viewer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(158)))), ((int)(((byte)(177)))));
+            this.btn_grade_level_viewer.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(158)))), ((int)(((byte)(177)))));
+            this.btn_grade_level_viewer.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btn_grade_level_viewer.HoverState.Parent = this.btn_grade_level_viewer;
+            this.btn_grade_level_viewer.Location = new System.Drawing.Point(182, 64);
+            this.btn_grade_level_viewer.MaximumSize = new System.Drawing.Size(166, 48);
+            this.btn_grade_level_viewer.Name = "btn_grade_level_viewer";
+            this.btn_grade_level_viewer.ShadowDecoration.Parent = this.btn_grade_level_viewer;
+            this.btn_grade_level_viewer.Size = new System.Drawing.Size(166, 31);
+            this.btn_grade_level_viewer.TabIndex = 15;
+            this.btn_grade_level_viewer.Text = "Grade Level Viewer";
+            // 
+            // btn_advance_search
+            // 
+            this.btn_advance_search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_advance_search.Animated = true;
+            this.btn_advance_search.BackColor = System.Drawing.Color.Transparent;
+            this.btn_advance_search.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.btn_advance_search.BorderRadius = 12;
+            this.btn_advance_search.BorderThickness = 2;
+            this.btn_advance_search.CheckedState.Parent = this.btn_advance_search;
+            this.btn_advance_search.CustomImages.Parent = this.btn_advance_search;
+            this.btn_advance_search.FillColor = System.Drawing.Color.White;
+            this.btn_advance_search.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_advance_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(31)))), ((int)(((byte)(32)))));
+            this.btn_advance_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(170)))), ((int)(((byte)(86)))));
+            this.btn_advance_search.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(170)))), ((int)(((byte)(86)))));
+            this.btn_advance_search.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btn_advance_search.HoverState.Parent = this.btn_advance_search;
+            this.btn_advance_search.Location = new System.Drawing.Point(782, 64);
+            this.btn_advance_search.Name = "btn_advance_search";
+            this.btn_advance_search.ShadowDecoration.BorderRadius = 4;
+            this.btn_advance_search.ShadowDecoration.Depth = 15;
+            this.btn_advance_search.ShadowDecoration.Parent = this.btn_advance_search;
+            this.btn_advance_search.Size = new System.Drawing.Size(136, 31);
+            this.btn_advance_search.TabIndex = 14;
+            this.btn_advance_search.Text = "Advanced Search";
+            // 
             // dashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(934, 565);
+            this.Controls.Add(this.btn_issue);
+            this.Controls.Add(this.btn_update_libre);
+            this.Controls.Add(this.btn_subj_browser);
+            this.Controls.Add(this.btn_visit_directory);
+            this.Controls.Add(this.btn_github);
+            this.Controls.Add(this.btn_grade_level_viewer);
+            this.Controls.Add(this.btn_advance_search);
+            this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -190,6 +398,14 @@
         private Guna.UI2.WinForms.Guna2TextBox dashBoard_searchTextBox;
         private System.Windows.Forms.PictureBox logoBox;
         private Guna.UI2.WinForms.Guna2Button dashBoard_exitBTN;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2Button btn_issue;
+        private Guna.UI2.WinForms.Guna2Button btn_update_libre;
+        private Guna.UI2.WinForms.Guna2Button btn_subj_browser;
+        private Guna.UI2.WinForms.Guna2Button btn_visit_directory;
+        private Guna.UI2.WinForms.Guna2Button btn_github;
+        private Guna.UI2.WinForms.Guna2Button btn_grade_level_viewer;
+        private Guna.UI2.WinForms.Guna2Button btn_advance_search;
     }
 }
 
