@@ -20,6 +20,7 @@ namespace Libre_2022
         private void Form1_Load(object sender, EventArgs e)
         {
 
+           // shadowForm_dashBoard.SetShadowForm(this);
 
 
 
