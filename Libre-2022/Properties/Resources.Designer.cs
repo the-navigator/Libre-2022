@@ -73,6 +73,26 @@ namespace Libre_2022.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap book_96px {
+            get {
+                object obj = ResourceManager.GetObject("book_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap book_stack_96px {
+            get {
+                object obj = ResourceManager.GetObject("book_stack_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bookmark_96px {
             get {
                 object obj = ResourceManager.GetObject("bookmark_96px", resourceCulture);
@@ -93,6 +113,26 @@ namespace Libre_2022.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap briefcase_96px {
+            get {
+                object obj = ResourceManager.GetObject("briefcase_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circled_play_96px {
+            get {
+                object obj = ResourceManager.GetObject("circled_play_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clipboard_96px {
             get {
                 object obj = ResourceManager.GetObject("clipboard_96px", resourceCulture);
@@ -103,9 +143,29 @@ namespace Libre_2022.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clipboard_96px1 {
+            get {
+                object obj = ResourceManager.GetObject("clipboard_96px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download_96px {
             get {
                 object obj = ResourceManager.GetObject("download_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap electrical_96px {
+            get {
+                object obj = ResourceManager.GetObject("electrical_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +186,16 @@ namespace Libre_2022.Properties {
         internal static System.Drawing.Bitmap Empty_Files {
             get {
                 object obj = ResourceManager.GetObject("Empty-Files", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kawaii_Folders_96px {
+            get {
+                object obj = ResourceManager.GetObject("Kawaii Folders_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +246,16 @@ namespace Libre_2022.Properties {
         internal static System.Drawing.Bitmap pdf_96px {
             get {
                 object obj = ResourceManager.GetObject("pdf_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pin_96px {
+            get {
+                object obj = ResourceManager.GetObject("pin_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
