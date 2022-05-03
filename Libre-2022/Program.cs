@@ -17,6 +17,6 @@ namespace Libre_2022
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new dashBoard());
-        }
+        } 
     }
 }
