@@ -193,9 +193,19 @@ namespace Libre_2022.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Kawaii_Folders_96px {
+        internal static System.Drawing.Bitmap kawaii_folders_96px1 {
             get {
-                object obj = ResourceManager.GetObject("Kawaii Folders_96px", resourceCulture);
+                object obj = ResourceManager.GetObject("kawaii_folders_96px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kawaii_folders_96px2 {
+            get {
+                object obj = ResourceManager.GetObject("kawaii_folders_96px2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

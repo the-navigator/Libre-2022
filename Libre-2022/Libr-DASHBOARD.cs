@@ -12,6 +12,8 @@ namespace Libre_2022
 {
     public partial class dashBoard : Form
     {
+        private string databaseName;
+
         public dashBoard()
         {
             InitializeComponent();
@@ -25,24 +27,10 @@ namespace Libre_2022
 
 
         }
-
-        private void logoBox_Click(object sender, EventArgs e)
+ 
+        private void DashBoard_importLib_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CircleButton1_Click(object sender, EventArgs e)
-        {
+            OpenFileDialog opnLibr = new OpenFileDialog();
 
         }
     }

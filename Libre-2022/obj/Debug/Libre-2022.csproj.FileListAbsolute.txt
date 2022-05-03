@@ -5,7 +5,6 @@ D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\Libre-2022.exe
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\Libre-2022.pdb
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\EntityFramework.dll
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\EntityFramework.SqlServer.dll
-D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\Guna.UI2.dll
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\System.Data.SQLite.dll
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\System.Data.SQLite.EF6.dll
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\System.Data.SQLite.Linq.dll
