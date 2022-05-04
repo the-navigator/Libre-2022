@@ -40,7 +40,7 @@
             this.db_Drag = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.gradient_design = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.dashboard_placeHolder = new Guna.UI2.WinForms.Guna2Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.ResourceList = new System.Windows.Forms.ListView();
             this.db_ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.db_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.db_Author = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -239,21 +239,21 @@
             this.dashboard_placeHolder.Text = "PlaceHolder_Texxt";
             this.dashboard_placeHolder.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // listView1
+            // ResourceList
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ResourceList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.db_ID,
             this.db_Name,
             this.db_Author,
             this.db_LastOpened});
-            this.listView1.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(239, 85);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(679, 388);
-            this.listView1.TabIndex = 48;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.ResourceList.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResourceList.HideSelection = false;
+            this.ResourceList.Location = new System.Drawing.Point(239, 85);
+            this.ResourceList.Name = "ResourceList";
+            this.ResourceList.Size = new System.Drawing.Size(679, 388);
+            this.ResourceList.TabIndex = 48;
+            this.ResourceList.UseCompatibleStateImageBehavior = false;
+            this.ResourceList.View = System.Windows.Forms.View.Details;
             // 
             // db_ID
             // 
@@ -482,7 +482,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(934, 565);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.ResourceList);
             this.Controls.Add(this.guna2Button7);
             this.Controls.Add(this.dashboard_placeHolder);
             this.Controls.Add(this.guna2Button9);
@@ -525,7 +525,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button9;
         private Guna.UI2.WinForms.Guna2Button dashboard_placeHolder;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView ResourceList;
         private System.Windows.Forms.ColumnHeader db_ID;
         private System.Windows.Forms.ColumnHeader db_Name;
         private System.Windows.Forms.ColumnHeader db_Author;

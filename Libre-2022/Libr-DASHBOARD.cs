@@ -16,6 +16,8 @@ namespace Libre_2022
 {
     public partial class dashBoard : Form
     {
+        LIBRE_ENG.DatabaseConnect dbProperty = new LIBRE_ENG.DatabaseConnect();
+       // LIBRE_ENG.DatabaseConnection dbConenction = new LIBRE_ENG.DatabaseConnection();
         public static string databaseName;
         public static string databasePath;
 
@@ -36,7 +38,7 @@ namespace Libre_2022
         private void DashBoard_importLib_Click(object sender, EventArgs e)
         {
             OpenFileDialog opnLibr = new OpenFileDialog();
-            opnLibr.Filter = "Libr Database|*.lib" + 
+            opnLibr.Filter = "Libr Database|*.lib *.db" +
                              "|Archives Files|*.zip;*.rar" +
                              "|JSON FIles|*.json" +
                              "|All Files|*.*";
@@ -44,10 +46,13 @@ namespace Libre_2022
             {
                 databasePath = opnLibr.FileName;
                 databaseName = opnLibr.SafeFileName;
-                var dbProperty = new LIBRE_ENG.DatabaseProperties();
+    
                 dbProperty.SetNamePath(databasePath, databaseName);
-                //MessageBox.Show(dbProperty.TestName);
-
+                //  dbConenction.initializeLoad();
+                //   MessageBox.Show(dbProperty.databasePath);
+                MessageBox.Show(dbProperty._connectionString);
+                dbProperty.initializeLoad();
+                loadData();
                 /*
                 LibreEngine_Root.LibreEngine.Libre_databasePath = databasePath;
                 MessageBox.Show(LibreEngine_Root.LibreEngine.Libre_databasePath);   
@@ -59,7 +64,28 @@ namespace Libre_2022
 
             }
   
+        }
 
+        private void loadData()
+        {
+            try
+            {
+                if (dbProperty.dt.Rows.Count > 0)   
+                {
+                    for(int i = 0; i < dbProperty.dt.Rows.Count; i++)
+                    {
+                        DataRow dr = dbProperty.dt.Rows[i];
+                        ListViewItem DatabaseEntry = new ListViewItem(dr["ID"].ToString());
+                        DatabaseEntry.SubItems.Add(dr["Name"].ToString());
+                        // DatabaseEntry.SubItems.Add(dr["Name"].ToString());
+                        ResourceList.Items.Add(DatabaseEntry);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);    
+            };
         }
     }
 }
