@@ -1,6 +1,6 @@
 ﻿namespace Libre_2022
 {
-    partial class dashBoard
+    partial class LibreDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashBoard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibreDashboard));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dashBoard_searchBTN = new Guna.UI2.WinForms.Guna2Button();
             this.dashBoard_searchTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,6 +53,7 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.DashBoard_importLib = new Guna.UI2.WinForms.Guna2Button();
             this.OPDialog_ImportLib = new System.Windows.Forms.OpenFileDialog();
+            this.JSONTEST = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.SuspendLayout();
@@ -294,7 +295,7 @@
             this.guna2Button7.Image = global::Libre_2022.Properties.Resources.book_96px;
             this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button7.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.guna2Button7.Location = new System.Drawing.Point(734, 479);
+            this.guna2Button7.Location = new System.Drawing.Point(752, 479);
             this.guna2Button7.MaximumSize = new System.Drawing.Size(166, 48);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.ShadowDecoration.Parent = this.guna2Button7;
@@ -476,12 +477,42 @@
             // 
             this.OPDialog_ImportLib.FileName = "openFileDialog1";
             // 
-            // dashBoard
+            // JSONTEST
+            // 
+            this.JSONTEST.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.JSONTEST.Animated = true;
+            this.JSONTEST.BorderColor = System.Drawing.Color.White;
+            this.JSONTEST.BorderRadius = 12;
+            this.JSONTEST.BorderThickness = 1;
+            this.JSONTEST.CheckedState.Parent = this.JSONTEST;
+            this.JSONTEST.CustomImages.Parent = this.JSONTEST;
+            this.JSONTEST.FillColor = System.Drawing.Color.White;
+            this.JSONTEST.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JSONTEST.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.JSONTEST.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(208)))), ((int)(((byte)(254)))));
+            this.JSONTEST.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(208)))), ((int)(((byte)(254)))));
+            this.JSONTEST.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.JSONTEST.HoverState.Parent = this.JSONTEST;
+            this.JSONTEST.Image = global::Libre_2022.Properties.Resources.clipboard_96px1;
+            this.JSONTEST.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.JSONTEST.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.JSONTEST.Location = new System.Drawing.Point(580, 479);
+            this.JSONTEST.MaximumSize = new System.Drawing.Size(166, 48);
+            this.JSONTEST.Name = "JSONTEST";
+            this.JSONTEST.ShadowDecoration.Parent = this.JSONTEST;
+            this.JSONTEST.Size = new System.Drawing.Size(166, 48);
+            this.JSONTEST.TabIndex = 49;
+            this.JSONTEST.Text = "JSON_TEST";
+            this.JSONTEST.TextOffset = new System.Drawing.Point(10, 0);
+            this.JSONTEST.Click += new System.EventHandler(this.JSONTEST_Click);
+            // 
+            // LibreDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(934, 565);
+            this.Controls.Add(this.JSONTEST);
             this.Controls.Add(this.ResourceList);
             this.Controls.Add(this.guna2Button7);
             this.Controls.Add(this.dashboard_placeHolder);
@@ -497,10 +528,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "dashBoard";
+            this.Name = "LibreDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Libre - Flexible Digital Library";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.ResumeLayout(false);
@@ -531,6 +561,7 @@
         private System.Windows.Forms.ColumnHeader db_Author;
         private System.Windows.Forms.ColumnHeader db_LastOpened;
         private System.Windows.Forms.OpenFileDialog OPDialog_ImportLib;
+        private Guna.UI2.WinForms.Guna2Button JSONTEST;
     }
 }
 

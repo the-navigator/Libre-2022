@@ -18,8 +18,10 @@ D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre-2022.csproj.CoreCompileInpu
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre-2022.csproj.CopyComplete
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre-2022.exe
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre-2022.pdb
-D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre_2022.dashBoard.resources
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre_2022.Libre_Home.resources
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\LibreEngine.dll
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\LibreEngine.pdb
+D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\Newtonsoft.Json.dll
+D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\Newtonsoft.Json.xml
+D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre_2022.LibreDashboard.resources
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre-2022.csproj.AssemblyReference.cache

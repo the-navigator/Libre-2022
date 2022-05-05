@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.IO;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -9,32 +10,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibreEngine_Root;
 using Libre_2022.LIBRE_ENG;
+using Newtonsoft.Json;
 
 
 
 namespace Libre_2022
 {
-    public partial class dashBoard : Form
+    public partial class LibreDashboard : Form
     {
-        LIBRE_ENG.DatabaseConnect dbProperty = new LIBRE_ENG.DatabaseConnect();
-       // LIBRE_ENG.DatabaseConnection dbConenction = new LIBRE_ENG.DatabaseConnection();
+        LIBRE_ENG.DatabaseConnection dbConnection = new LIBRE_ENG.DatabaseConnection();
         public static string databaseName;
         public static string databasePath;
 
-        public dashBoard()
+        public LibreDashboard()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-           // shadowForm_dashBoard.SetShadowForm(this);
-
-
-
-        }
- 
         private void DashBoard_importLib_Click(object sender, EventArgs e)
         {
             OpenFileDialog opnLibr = new OpenFileDialog();
@@ -47,21 +40,13 @@ namespace Libre_2022
                 databasePath = opnLibr.FileName;
                 databaseName = opnLibr.SafeFileName;
     
-                dbProperty.SetNamePath(databasePath, databaseName);
+                dbConnection.SetNamePath(databasePath, databaseName);
                 //  dbConenction.initializeLoad();
                 //   MessageBox.Show(dbProperty.databasePath);
-                MessageBox.Show(dbProperty._connectionString);
-                dbProperty.initializeLoad();
+                MessageBox.Show(dbConnection._connectionString);
+                dbConnection.initializeLoad();
                 loadData();
-                /*
-                LibreEngine_Root.LibreEngine.Libre_databasePath = databasePath;
-                MessageBox.Show(LibreEngine_Root.LibreEngine.Libre_databasePath);   
-
-                */
-
-                /*just test
-                 * MessageBox.Show(databaseName); */
-
+          
             }
   
         }
@@ -70,11 +55,11 @@ namespace Libre_2022
         {
             try
             {
-                if (dbProperty.dt.Rows.Count > 0)   
+                if (dbConnection.dt.Rows.Count > 0)   
                 {
-                    for(int i = 0; i < dbProperty.dt.Rows.Count; i++)
+                    for(int i = 0; i < dbConnection.dt.Rows.Count; i++)
                     {
-                        DataRow dr = dbProperty.dt.Rows[i];
+                        DataRow dr = dbConnection.dt.Rows[i];
                         ListViewItem DatabaseEntry = new ListViewItem(dr["ID"].ToString());
                         DatabaseEntry.SubItems.Add(dr["Name"].ToString());
                         // DatabaseEntry.SubItems.Add(dr["Name"].ToString());
@@ -86,6 +71,22 @@ namespace Libre_2022
             {
                 MessageBox.Show(ex.Message);    
             };
+        }
+
+        private void JSONTEST_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opnJSON = new OpenFileDialog();
+            opnJSON.Filter = "JSON| *.json";
+            if (opnJSON.ShowDialog() == DialogResult.OK)
+            {
+                string TestNameLoc = opnJSON.FileName;
+                string TestName;
+
+                dynamic jsonFile = JsonConvert.DeserializeObject(File.ReadAllText(opnJSON.FileName));
+                MessageBox.Show($"The name of db is: { jsonFile["Compiler"]}");
+
+
+            }
         }
     }
 }

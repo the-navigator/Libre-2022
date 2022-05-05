@@ -4,9 +4,8 @@ using System.Data.SQLite;
 namespace Libre_2022.LIBRE_ENG
 {
 
-    public class DatabaseConnect
+    public class DatabaseConnection
     {
-
 
         public string databasePath { get; set; }
 
@@ -38,7 +37,7 @@ namespace Libre_2022.LIBRE_ENG
             connnectionString = @"Data Source=" + _databasePath + ";Version=3";
             _connectionString = @"Data Source=" + _databasePath + ";Version=3";
             libreDB = new SQLiteConnection(_connectionString);
-            
+
 
         }
 
@@ -47,20 +46,13 @@ namespace Libre_2022.LIBRE_ENG
 
 
             libreDB.Open();
-           
+
             libreSQLDataAdapter = new SQLiteDataAdapter("SELECT * FROM [test_librResourceDB]", libreDB); //change select command
             libreSQLDataAdapter.Fill(dt);
-           
+
 
 
         }
-
-    }
-
-    public class DatabaseConnection
-    {
-
-
 
     }
 }
