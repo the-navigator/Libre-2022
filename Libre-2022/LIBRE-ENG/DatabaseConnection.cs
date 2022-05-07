@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using Libre_2022.LIBRE_ENG.DatabaseProperties;
+using System.Data;
 using System.Data.SQLite;
 
 namespace Libre_2022.LIBRE_ENG
@@ -10,7 +11,10 @@ namespace Libre_2022.LIBRE_ENG
         public string databasePath { get; set; }
 
         public static string _databasePath;
+
+        public static string DatabaseDirectory;
         private string databaseName { get; set; }
+
 
         public string TestName;
 
@@ -18,7 +22,7 @@ namespace Libre_2022.LIBRE_ENG
 
         public static string _cnString;
 
-        static string connnectionString = @"Data Source=" + _databasePath + ";Version=3";
+        static string connnectionString = @"Data Source=" + DatabaseTableInformation.GetFullNamePath() + ";Version=3";
         public string _connectionString = connnectionString;
         SQLiteConnection libreDB = new SQLiteConnection(connnectionString);
         SQLiteCommand libredbCMD = new SQLiteCommand();
@@ -27,15 +31,12 @@ namespace Libre_2022.LIBRE_ENG
 
 
 
-        public void SetNamePath(string _path, string _name)
+        public void SetNamePath()
         {
-
-            databasePath = _path;
-            databaseName = _name;
             _databasePath = databasePath;
             TestName = _databasePath;
-            connnectionString = @"Data Source=" + _databasePath + ";Version=3";
-            _connectionString = @"Data Source=" + _databasePath + ";Version=3";
+            connnectionString = @"Data Source=" + DatabaseTableInformation.GetFullNamePath() + ";Version=3";
+            _connectionString = @"Data Source=" + DatabaseTableInformation.GetFullNamePath() + ";Version=3";
             libreDB = new SQLiteConnection(_connectionString);
 
 
@@ -44,10 +45,10 @@ namespace Libre_2022.LIBRE_ENG
         public void initializeLoad()
         {
 
-
+            dt.Clear();
             libreDB.Open();
 
-            libreSQLDataAdapter = new SQLiteDataAdapter("SELECT * FROM [test_librResourceDB]", libreDB); //change select command
+            libreSQLDataAdapter = new SQLiteDataAdapter("SELECT * FROM " + "[" + DatabaseTableInformation.GetTableName() + "]", libreDB); //change select command
             libreSQLDataAdapter.Fill(dt);
 
 

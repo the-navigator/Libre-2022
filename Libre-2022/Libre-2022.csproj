@@ -77,11 +77,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Libr-DASHBOARD.cs">
+    <Compile Include="LIBRE-ENG\DatabaseTableInformation.cs" />
+    <Compile Include="Libre_Navigator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Libr-DASHBOARD.Designer.cs">
-      <DependentUpon>Libr-DASHBOARD.cs</DependentUpon>
+    <Compile Include="Libre_Navigator.Designer.cs">
+      <DependentUpon>Libre_Navigator.cs</DependentUpon>
     </Compile>
     <Compile Include="LIBRE-ENG\DatabaseConnection.cs" />
     <Compile Include="LIBRE-ENG\DatabaseInformation.cs" />
@@ -93,8 +94,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Libr-DASHBOARD.resx">
-      <DependentUpon>Libr-DASHBOARD.cs</DependentUpon>
+    <Compile Include="resource_Display.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="resource_Display.Designer.cs">
+      <DependentUpon>resource_Display.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Libre_Navigator.resx">
+      <DependentUpon>Libre_Navigator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Libre-Start.resx">
       <DependentUpon>Libre-Start.cs</DependentUpon>
@@ -109,6 +116,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="resource_Display.resx">
+      <DependentUpon>resource_Display.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

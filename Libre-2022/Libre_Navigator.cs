@@ -13,51 +13,54 @@ using Libre_2022.LIBRE_ENG;
 using Newtonsoft.Json;
 
 
-
 namespace Libre_2022
 {
-    public partial class LibreDashboard : Form
+    public partial class Libre_Navigator : Form
     {
         LIBRE_ENG.DatabaseConnection dbConnection = new LIBRE_ENG.DatabaseConnection();
         public static string databaseName;
         public static string databasePath;
 
-        public LibreDashboard()
+        public Libre_Navigator()
         {
             InitializeComponent();
         }
 
+        public static string ResourceDisplayName { get; set; }
+        public static void SetResourceDisplayName(string _ResourceDisplayName)
+        {
+            ResourceDisplayName = _ResourceDisplayName;
+        }
 
         private void DashBoard_importLib_Click(object sender, EventArgs e)
         {
+            ResourceList.Items.Clear();
             OpenFileDialog opnLibr = new OpenFileDialog();
-            opnLibr.Filter = "Libr Database|*.lib *.db" +
-                             "|Archives Files|*.zip;*.rar" +
-                             "|JSON FIles|*.json" +
-                             "|All Files|*.*";
+            opnLibr.Filter = "JSON| *.json";
             if (opnLibr.ShowDialog() == DialogResult.OK)
             {
-                databasePath = opnLibr.FileName;
-                databaseName = opnLibr.SafeFileName;
-    
-                dbConnection.SetNamePath(databasePath, databaseName);
-                //  dbConenction.initializeLoad();
-                //   MessageBox.Show(dbProperty.databasePath);
-                MessageBox.Show(dbConnection._connectionString);
+                string TestNameLoc = opnLibr.FileName;
+                string Directory = Path.GetDirectoryName(opnLibr.FileName);
+                LIBRE_ENG.DatabaseProperties.Methods.ReadData(TestNameLoc, Directory);
+                dbConnection.SetNamePath();
+               // MessageBox.Show(dbConnection._connectionString);
                 dbConnection.initializeLoad();
+                dashboard_placeHolder.Text = ResourceDisplayName;
                 loadData();
-          
+
             }
-  
+
+
         }
 
         private void loadData()
         {
+         
             try
             {
-                if (dbConnection.dt.Rows.Count > 0)   
+                if (dbConnection.dt.Rows.Count > 0)
                 {
-                    for(int i = 0; i < dbConnection.dt.Rows.Count; i++)
+                    for (int i = 0; i < dbConnection.dt.Rows.Count; i++)
                     {
                         DataRow dr = dbConnection.dt.Rows[i];
                         ListViewItem DatabaseEntry = new ListViewItem(dr["ID"].ToString());
@@ -69,7 +72,7 @@ namespace Libre_2022
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);    
+                MessageBox.Show(ex.Message);
             };
         }
 
@@ -79,11 +82,18 @@ namespace Libre_2022
             opnJSON.Filter = "JSON| *.json";
             if (opnJSON.ShowDialog() == DialogResult.OK)
             {
-                string TestNameLoc = opnJSON.FileName;
-                string TestName;
 
-                dynamic jsonFile = JsonConvert.DeserializeObject(File.ReadAllText(opnJSON.FileName));
-                MessageBox.Show($"The name of db is: { jsonFile["Compiler"]}");
+                string TestNameLoc = opnJSON.FileName;
+                string Directory = Path.GetDirectoryName(opnJSON.FileName);
+                //MessageBox.Show(Directory);
+                LIBRE_ENG.DatabaseProperties.Methods.ReadData(TestNameLoc, Directory);
+
+                MessageBox.Show(LIBRE_ENG.DatabaseProperties.DatabaseTableInformation.GetFullNamePath());
+                /*
+             dynamic jsonFile = JsonConvert.DeserializeObject(File.ReadAllText(opnJSON.FileName));
+             MessageBox.Show($"The name of db is: { jsonFile["Compiler"]}");
+             dashboard_placeHolder.Text = jsonFile["DatabaseName"];
+                */
 
 
             }
