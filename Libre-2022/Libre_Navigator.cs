@@ -18,8 +18,10 @@ namespace Libre_2022
     public partial class Libre_Navigator : Form
     {
         LIBRE_ENG.DatabaseConnection dbConnection = new LIBRE_ENG.DatabaseConnection();
-        public static string databaseName;
-        public static string databasePath;
+     
+        LIBRE_ENG.OpenResource opnResource = new LIBRE_ENG.OpenResource();  
+        public  string databaseName;
+        public  string databasePath;
 
         public Libre_Navigator()
         {
@@ -34,6 +36,7 @@ namespace Libre_2022
 
         private void DashBoard_importLib_Click(object sender, EventArgs e)
         {
+
             ResourceList.Items.Clear();
             OpenFileDialog opnLibr = new OpenFileDialog();
             opnLibr.Filter = "JSON| *.json";
@@ -64,7 +67,8 @@ namespace Libre_2022
                     {
                         DataRow dr = dbConnection.dt.Rows[i];
                         ListViewItem DatabaseEntry = new ListViewItem(dr["ID"].ToString());
-                        DatabaseEntry.SubItems.Add(dr["Name"].ToString());
+                        // FIX THIS, PLEASE INPUT A VARIABLE DATA FOR THE TABLE TO ADJUST
+                        DatabaseEntry.SubItems.Add(dr["ResourceName"].ToString());
                         // DatabaseEntry.SubItems.Add(dr["Name"].ToString());
                         ResourceList.Items.Add(DatabaseEntry);
                     }
@@ -97,6 +101,28 @@ namespace Libre_2022
 
 
             }
+        }
+
+        private void Libre_Navigator_Load(object sender, EventArgs e)
+        {
+            loadData();
+            dashboard_placeHolder.Text = ResourceDisplayName;
+
+        }
+
+        private void btn_OpenResource_Click(object sender, EventArgs e)
+        {
+            ListViewItem selectOpen = new ListViewItem();
+            selectOpen = ResourceList.SelectedItems[0];
+            string selectedID = selectOpen.SubItems[0].Text;
+            // string selectedName = selectOpen.SubItems[2].Text;
+            MessageBox.Show(LIBRE_ENG.DatabaseProperties.DatabaseTableInformation.tblclmn_ResourceID);
+            //opnResource.inputData(selectedID, selectedID);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

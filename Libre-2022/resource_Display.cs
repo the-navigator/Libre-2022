@@ -18,5 +18,10 @@ namespace Libre_2022
 
 
         }
+
+        private void resource_Display_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

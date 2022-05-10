@@ -28,34 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
-            this.ResourceDisplay_Shadow = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
-            // button1
+            // guna2Button2
             // 
-            this.button1.Location = new System.Drawing.Point(66, 76);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderColor = System.Drawing.Color.LightGray;
+            this.guna2Button2.BorderRadius = 15;
+            this.guna2Button2.BorderThickness = 1;
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.FillColor = System.Drawing.Color.White;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.Gray;
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Image = global::Libre_2022.FileDisplayIcons.pdf_96px;
+            this.guna2Button2.ImageOffset = new System.Drawing.Point(22, -5);
+            this.guna2Button2.ImageSize = new System.Drawing.Size(75, 75);
+            this.guna2Button2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(147, 141);
+            this.guna2Button2.TabIndex = 51;
+            this.guna2Button2.Text = "English Textbook";
+            this.guna2Button2.TextOffset = new System.Drawing.Point(-18, 50);
             // 
             // resource_Display
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.guna2Button2);
             this.Name = "resource_Display";
-            this.Size = new System.Drawing.Size(195, 170);
+            this.Size = new System.Drawing.Size(147, 141);
+            this.Load += new System.EventHandler(this.resource_Display_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private Guna.UI2.WinForms.Guna2ShadowForm ResourceDisplay_Shadow;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

@@ -23,6 +23,9 @@ D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\LibreEngine.dll
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\LibreEngine.pdb
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\Newtonsoft.Json.dll
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\bin\Debug\Newtonsoft.Json.xml
-D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre-2022.csproj.AssemblyReference.cache
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre_2022.Libre_Navigator.resources
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre_2022.resource_Display.resources
+D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre_2022.ImportLibrary.resources
+D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre_2022.FileDisplayIcons.resources
+D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre-2022.csproj.AssemblyReference.cache
+D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre_2022.FLUENT-ICONS.resources

@@ -58,9 +58,20 @@ namespace Libre_2022.LIBRE_ENG.DatabaseProperties
                     return TableName;
                 }
 
-        public static string[] TableColumns { get; set; }
+        /*                  REMEMBER THE FOLLOWING:
+         *         1 -> ID OF THE RESOURCE
+         *         2 -> NAME OF RESOURCE
+         *         3 -> AUTHOR OF RESOURCCE
+         *         4 -> FILE EXTENSION OF RESOURCE
+         *         5 -> THE COLUM NAME CONTAINING THE BLOB
+         * 
+         */
 
-
+        public static string tblclmn_ResourceID { get; set; }
+        public static string tblclmn_ResourceName { get; set; }
+        public static string tblclmn_ResourceAuthor { get; set; }
+        public static string tblclmn_ResourceExtension { get; set; }
+        public static string tblclmn_ResourceBLOB { get; set; }
 
     }
 
@@ -80,6 +91,12 @@ namespace Libre_2022.LIBRE_ENG.DatabaseProperties
 
             Libre_Navigator.SetResourceDisplayName(DatabaseInformation.GetName());
 
+            // TABLE NAMES //
+            DatabaseTableInformation.tblclmn_ResourceID = jsonFile["ID"];
+            DatabaseTableInformation.tblclmn_ResourceName = jsonFile["ResourceName"];
+            DatabaseTableInformation.tblclmn_ResourceAuthor = jsonFile["AuthorofResource"];
+            DatabaseTableInformation.tblclmn_ResourceExtension = jsonFile["ResourceExtension"];
+            DatabaseTableInformation.tblclmn_ResourceBLOB = jsonFile["BLOB"];
             // DatabaseTableInformation.SetDatabaseName(jsonFile["DatabaseName"]);
         }
     }

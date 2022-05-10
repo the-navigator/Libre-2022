@@ -77,6 +77,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileDisplayIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FileDisplayIcons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="FLUENT-ICONS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FLUENT-ICONS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportLibrary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportLibrary.Designer.cs">
+      <DependentUpon>ImportLibrary.cs</DependentUpon>
+    </Compile>
     <Compile Include="LIBRE-ENG\DatabaseTableInformation.cs" />
     <Compile Include="Libre_Navigator.cs">
       <SubType>Form</SubType>
@@ -100,6 +116,17 @@
     <Compile Include="resource_Display.Designer.cs">
       <DependentUpon>resource_Display.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FileDisplayIcons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FileDisplayIcons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLUENT-ICONS.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FLUENT-ICONS.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportLibrary.resx">
+      <DependentUpon>ImportLibrary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Libre_Navigator.resx">
       <DependentUpon>Libre_Navigator.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +255,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\kawaii_folders_96px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf_96px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advanced_search_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moleskine_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video_clip_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advanced_search_96px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moleskine_96px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video_clip_96px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_96px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sitting-8%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DrawKit Vector Illustration Fun &amp; Playful Finn Character %286%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

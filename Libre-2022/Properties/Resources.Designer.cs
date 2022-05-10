@@ -163,6 +163,16 @@ namespace Libre_2022.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DrawKit_Vector_Illustration_Fun___Playful_Finn_Character__6_ {
+            get {
+                object obj = ResourceManager.GetObject("DrawKit Vector Illustration Fun & Playful Finn Character (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap electrical_96px {
             get {
                 object obj = ResourceManager.GetObject("electrical_96px", resourceCulture);
@@ -316,6 +326,16 @@ namespace Libre_2022.Properties {
         internal static System.Drawing.Bitmap settings_96px {
             get {
                 object obj = ResourceManager.GetObject("settings_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sitting_8_2x {
+            get {
+                object obj = ResourceManager.GetObject("sitting-8@2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

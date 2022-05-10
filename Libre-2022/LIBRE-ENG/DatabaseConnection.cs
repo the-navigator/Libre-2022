@@ -1,6 +1,8 @@
 ﻿using Libre_2022.LIBRE_ENG.DatabaseProperties;
 using System.Data;
 using System.Data.SQLite;
+using System.IO;
+using System;
 
 namespace Libre_2022.LIBRE_ENG
 {
@@ -24,7 +26,7 @@ namespace Libre_2022.LIBRE_ENG
 
         static string connnectionString = @"Data Source=" + DatabaseTableInformation.GetFullNamePath() + ";Version=3";
         public string _connectionString = connnectionString;
-        SQLiteConnection libreDB = new SQLiteConnection(connnectionString);
+        public SQLiteConnection libreDB = new SQLiteConnection(connnectionString);
         SQLiteCommand libredbCMD = new SQLiteCommand();
         SQLiteDataAdapter libreSQLDataAdapter = new SQLiteDataAdapter();
         public DataTable dt = new DataTable();
@@ -55,5 +57,54 @@ namespace Libre_2022.LIBRE_ENG
 
         }
 
+    }
+
+    public class OpenResource
+    {
+        static string connnectionString = @"Data Source=" + DatabaseTableInformation.GetFullNamePath() + ";Version=3";
+        SQLiteConnection libreDB = new SQLiteConnection(connnectionString);
+        public  string ResourceID;
+        public  string ResourceName;
+
+        public  void inputData(string _ID, string _Name)
+        {
+            ResourceID = DatabaseTableInformation.tblclmn_ResourceID;
+            ResourceName = _Name;
+        }
+
+        public  void OpenFile()
+        {
+            string pathToExtract = Environment.CurrentDirectory + @"\ExtractFiles\";
+            libreDB.Open();
+            SQLiteCommand openFile = new SQLiteCommand("SELECT * FROM " +DatabaseTableInformation.GetTableName()+ 
+                " WHERE ID=" + ResourceID, libreDB);
+            
+            /*
+            SQLiteDataReader openFileReader = openFile.ExecuteReader(System.Data.CommandBehavior.Default);
+
+            try
+            {
+                while (openFileReader.Read())
+                {
+                    SQLiteBlob fileBlob = openFileReader.GetBlob(openFileReader.GetOrdinal("File"), readOnly: true);
+                }
+
+                long fileSize = openFileReader.GetInt32(openFileReader.GetOrdinal("File"));
+                byte[] fileData = new byte[fileSize];
+                openFileReader.GetBytes(openFileReader.GetInt32(openFileReader.GetOrdinal("File")), 0, fileData, 0, (int)fileSize);
+
+                string fileName = openFileReader.GetString(openFileReader.GetOrdinal("ResourceName"));
+                string fileExt = openFileReader.GetString(openFileReader.GetOrdinal("ResourceExt"));
+                string fullPath = pathToExtract + "\\" + fileName + fileExt;
+                FileStream fs = new FileStream(fullPath, FileMode.OpenOrCreate);
+                fs.Write(fileData, 0, (int)fileSize);
+                System.Diagnostics.Process.Start(fullPath);
+            }
+            catch
+            {
+
+            }
+            */
+        }
     }
 }

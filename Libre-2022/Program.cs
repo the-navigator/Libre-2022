@@ -16,7 +16,8 @@ namespace Libre_2022
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Libre_Navigator());
+            // Application.Run(new Libre_Navigator());
+            Application.Run(new ImportLibrary());
         } 
     }
 }
