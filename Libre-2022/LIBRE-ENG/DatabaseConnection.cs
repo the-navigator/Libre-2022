@@ -66,45 +66,51 @@ namespace Libre_2022.LIBRE_ENG
         public  string ResourceID;
         public  string ResourceName;
 
-        public  void inputData(string _ID, string _Name)
+        public  void inputData(string _ID)
         {
-            ResourceID = DatabaseTableInformation.tblclmn_ResourceID;
-            ResourceName = _Name;
+            //ResourceID = DatabaseTableInformation.tblclmn_ResourceID;
+            ResourceID = _ID;
+            //ResourceName = _Name;]
+            OpenFile();
         }
 
-        public  void OpenFile()
+        public void OpenFile()
         {
-            string pathToExtract = Environment.CurrentDirectory + @"\ExtractFiles\";
-            libreDB.Open();
+            string pathToExtract = Environment.CurrentDirectory;   
+            string opncn = @"Data Source=" + DatabaseTableInformation.GetFullNamePath() + ";Version=3";
+            SQLiteConnection opn = new SQLiteConnection(opncn);
+            opn = new SQLiteConnection(opncn);
+            opn.Open();
             SQLiteCommand openFile = new SQLiteCommand("SELECT * FROM " +DatabaseTableInformation.GetTableName()+ 
-                " WHERE ID=" + ResourceID, libreDB);
+                " WHERE ID=" + ResourceID, opn);
             
-            /*
+           
             SQLiteDataReader openFileReader = openFile.ExecuteReader(System.Data.CommandBehavior.Default);
 
             try
             {
                 while (openFileReader.Read())
                 {
-                    SQLiteBlob fileBlob = openFileReader.GetBlob(openFileReader.GetOrdinal("File"), readOnly: true);
+                    SQLiteBlob fileBlob = openFileReader.GetBlob(openFileReader.GetOrdinal(DatabaseTableInformation.tblclmn_ResourceBLOB), readOnly: true);
+                    long fileSize = openFileReader.GetInt32(openFileReader.GetOrdinal(DatabaseTableInformation.tblclmn_ResourceBLOB));
+                    byte[] fileData = new byte[fileSize];
+                    openFileReader.GetBytes(openFileReader.GetInt32(openFileReader.GetOrdinal(DatabaseTableInformation.tblclmn_ResourceBLOB)), 0, fileData, 0, (int)fileSize);
+
+                    string fileName = openFileReader.GetString(openFileReader.GetOrdinal(DatabaseTableInformation.tblclmn_ResourceName));
+                    string fileExt = openFileReader.GetString(openFileReader.GetOrdinal(DatabaseTableInformation.tblclmn_ResourceExtension));
+                    string fullPath = pathToExtract + "\\" + fileName + fileExt;
+                    FileStream fs = new FileStream(fullPath, FileMode.OpenOrCreate);
+                    fs.Write(fileData, 0, (int)fileSize);
+                    System.Diagnostics.Process.Start(fullPath);
                 }
 
-                long fileSize = openFileReader.GetInt32(openFileReader.GetOrdinal("File"));
-                byte[] fileData = new byte[fileSize];
-                openFileReader.GetBytes(openFileReader.GetInt32(openFileReader.GetOrdinal("File")), 0, fileData, 0, (int)fileSize);
-
-                string fileName = openFileReader.GetString(openFileReader.GetOrdinal("ResourceName"));
-                string fileExt = openFileReader.GetString(openFileReader.GetOrdinal("ResourceExt"));
-                string fullPath = pathToExtract + "\\" + fileName + fileExt;
-                FileStream fs = new FileStream(fullPath, FileMode.OpenOrCreate);
-                fs.Write(fileData, 0, (int)fileSize);
-                System.Diagnostics.Process.Start(fullPath);
+         
             }
             catch
             {
 
             }
-            */
+            
         }
     }
 }

@@ -66,9 +66,9 @@ namespace Libre_2022
                     for (int i = 0; i < dbConnection.dt.Rows.Count; i++)
                     {
                         DataRow dr = dbConnection.dt.Rows[i];
-                        ListViewItem DatabaseEntry = new ListViewItem(dr["ID"].ToString());
+                        ListViewItem DatabaseEntry = new ListViewItem(dr[LIBRE_ENG.DatabaseProperties.DatabaseTableInformation.tblclmn_ResourceID].ToString());
                         // FIX THIS, PLEASE INPUT A VARIABLE DATA FOR THE TABLE TO ADJUST
-                        DatabaseEntry.SubItems.Add(dr["ResourceName"].ToString());
+                        DatabaseEntry.SubItems.Add(dr[LIBRE_ENG.DatabaseProperties.DatabaseTableInformation.tblclmn_ResourceName].ToString());
                         // DatabaseEntry.SubItems.Add(dr["Name"].ToString());
                         ResourceList.Items.Add(DatabaseEntry);
                     }
@@ -116,8 +116,9 @@ namespace Libre_2022
             selectOpen = ResourceList.SelectedItems[0];
             string selectedID = selectOpen.SubItems[0].Text;
             // string selectedName = selectOpen.SubItems[2].Text;
-            MessageBox.Show(LIBRE_ENG.DatabaseProperties.DatabaseTableInformation.tblclmn_ResourceID);
-            //opnResource.inputData(selectedID, selectedID);
+            //MessageBox.Show(selectOpen.SubItems[0].Text);
+            opnResource.inputData(selectedID);
+            opnResource.OpenFile();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
