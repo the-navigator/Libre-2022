@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibreEngine_Root;
+using Libre_2022.LIBRE_ENG.DatabaseProperties;
 using Libre_2022.LIBRE_ENG;
 using Newtonsoft.Json;
 
@@ -132,8 +133,24 @@ namespace Libre_2022
             ListViewItem nc = new ListViewItem();
             nc = ResourceList.SelectedItems[0];
             string selectid = nc.SubItems[0].Text;
-            dbConnection.ExtractToFileStream(selectid);
-            MessageBox.Show(dbConnection.nice);
+            DatabaseTableInformation.SelectedID = selectid;
+            dbConnection.StartExtract();
+           // MessageBox.Show(dbConnection.nice);
+        }
+
+        private void Libre_Navigator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        void deleteFile()
+        {
+            File.Delete(DatabaseConnection._extractloc);
+        }
+
+        private void Libre_Navigator_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            File.Delete(DatabaseConnection._extractloc);
         }
     }
 }

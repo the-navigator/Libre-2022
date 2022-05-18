@@ -582,6 +582,8 @@
             this.Name = "Libre_Navigator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Libre - Flexible Digital Library";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Libre_Navigator_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Libre_Navigator_FormClosed);
             this.Load += new System.EventHandler(this.Libre_Navigator_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();

@@ -3,12 +3,14 @@ using System.Data;
 using System.Data.SQLite;
 using System.IO;
 using System;
+using System.Threading;
 
 namespace Libre_2022.LIBRE_ENG
 {
 
     public class DatabaseConnection
     {
+        public static string _extractloc = "";
 
         public string databasePath { get; set; }
 
@@ -58,14 +60,22 @@ namespace Libre_2022.LIBRE_ENG
 
 
         }
-        public void ExtractToFileStream(string _id)
+
+        public void StartExtract()
+        {
+            Thread th = new Thread(new ThreadStart(ExtractToFileStream));
+            th.Start();
+        }
+        public void ExtractToFileStream()
         {
             SQLiteCommand cmd;
             SQLiteDataReader rdr;
             Int32 FileSize;
+            string FileName;
             byte[] RawData;
             FileStream fs;
 
+     
             string PathToExtract = Environment.CurrentDirectory;
           
 
@@ -89,29 +99,39 @@ namespace Libre_2022.LIBRE_ENG
              * '
              * */
             {
+            
                 libreDB.Open();
-                string cmntext = "SELECT Blob, filesize FROM test_librResourceDB WHERE ID = " + _id;
+                //string cmntext = "SELECT Blob, filesize FROM test_librResourceDB WHERE ID = " + _id;
+                string cmntext = "SELECT " 
+                    + DatabaseTableInformation.tblclmn_ResourceBLOB + ", " 
+                    + DatabaseTableInformation.tblclmn_FileSize + ", " 
+                    + "[" + DatabaseTableInformation.tblclmn_ResourceFull + "]" + " FROM " 
+                    + DatabaseTableInformation.TableName + " WHERE ID = " 
+                    + DatabaseTableInformation.SelectedID;
                 SQLiteCommand getRes = new SQLiteCommand(cmntext, libreDB);
                 getRes.CommandText = cmntext;
                 rdr = getRes.ExecuteReader();
 
                 rdr.Read();
-                FileSize = rdr.GetInt32(rdr.GetOrdinal("filesize"));
+                FileSize = rdr.GetInt32(rdr.GetOrdinal(DatabaseTableInformation.tblclmn_FileSize));
+                FileName = rdr.GetString(rdr.GetOrdinal(DatabaseTableInformation.tblclmn_ResourceFull));
+                string extractloc = Path.Combine(PathToExtract + "\\" + FileName);
+                _extractloc = extractloc;
                 nice = FileSize.ToString();
                 RawData = new byte[FileSize];
 
-                rdr.GetBytes(rdr.GetOrdinal("Blob"), 0, RawData, 0, (int)FileSize);
-                fs = new FileStream(@"D:\nice.mp3", FileMode.OpenOrCreate, FileAccess.Write);
+                rdr.GetBytes(rdr.GetOrdinal(DatabaseTableInformation.tblclmn_ResourceBLOB), 0, RawData, 0, (int)FileSize);
+                fs = new FileStream(extractloc, FileMode.OpenOrCreate, FileAccess.Write);
                 fs.Write(RawData, 0, (int)FileSize);
                 fs.Close();
-                System.Diagnostics.Process.Start(@"D:\nice.mp3");
-
+                System.Diagnostics.Process.Start(extractloc);
+                libreDB.Close();
 
 
             }
             finally
             {
-
+              //  File.Delete(_extractloc);
             }
         }
     }

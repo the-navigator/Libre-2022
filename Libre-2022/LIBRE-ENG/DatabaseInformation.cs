@@ -74,6 +74,11 @@ namespace Libre_2022.LIBRE_ENG.DatabaseProperties
         public static string tblclmn_ResourceFull { get; set; }
         public static string tblclmn_ResourceBLOB { get; set; }
 
+        public static string tblclmn_FileSize { get; set; }
+
+        //
+
+        public static string SelectedID { get; set; }
     }
 
     public static class Methods
@@ -100,6 +105,7 @@ namespace Libre_2022.LIBRE_ENG.DatabaseProperties
             DatabaseTableInformation.tblclmn_ResourceExtension = jsonFile["ResourceExtension"];
             DatabaseTableInformation.tblclmn_ResourceFull = jsonFile["ResourceFull"];
             DatabaseTableInformation.tblclmn_ResourceBLOB = jsonFile["BLOB"];
+            DatabaseTableInformation.tblclmn_FileSize = jsonFile["FileSize"];
             // DatabaseTableInformation.SetDatabaseName(jsonFile["DatabaseName"]);
         }
     }

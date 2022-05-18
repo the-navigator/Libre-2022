@@ -28,3 +28,4 @@ D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre_2022.resource_Display.resou
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre_2022.ImportLibrary.resources
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre_2022.FileDisplayIcons.resources
 D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre_2022.FLUENT-ICONS.resources
+D:\LIBRE\LIBRE\Libre-2022\Libre-2022\obj\Debug\Libre-2022.csproj.AssemblyReference.cache
