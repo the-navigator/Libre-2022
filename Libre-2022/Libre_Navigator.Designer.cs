@@ -58,6 +58,7 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.DashBoard_importLib = new Guna.UI2.WinForms.Guna2Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.tstopen = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.SuspendLayout();
@@ -254,8 +255,10 @@
             this.db_Author,
             this.db_LastOpened});
             this.ResourceList.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResourceList.FullRowSelect = true;
             this.ResourceList.HideSelection = false;
             this.ResourceList.Location = new System.Drawing.Point(268, 85);
+            this.ResourceList.MultiSelect = false;
             this.ResourceList.Name = "ResourceList";
             this.ResourceList.Size = new System.Drawing.Size(650, 388);
             this.ResourceList.TabIndex = 48;
@@ -524,12 +527,42 @@
             this.guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_HOR_NEGATIVE;
             this.guna2AnimateWindow1.Interval = 2000;
             // 
+            // tstopen
+            // 
+            this.tstopen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tstopen.Animated = true;
+            this.tstopen.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(223)))), ((int)(((byte)(254)))));
+            this.tstopen.BorderRadius = 7;
+            this.tstopen.BorderThickness = 1;
+            this.tstopen.CheckedState.Parent = this.tstopen;
+            this.tstopen.CustomImages.Parent = this.tstopen;
+            this.tstopen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(223)))), ((int)(((byte)(254)))));
+            this.tstopen.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tstopen.ForeColor = System.Drawing.Color.Black;
+            this.tstopen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(218)))), ((int)(((byte)(253)))));
+            this.tstopen.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(218)))), ((int)(((byte)(253)))));
+            this.tstopen.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
+            this.tstopen.HoverState.Parent = this.tstopen;
+            this.tstopen.Image = global::Libre_2022.Properties.Resources.book_96px;
+            this.tstopen.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tstopen.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.tstopen.Location = new System.Drawing.Point(604, 479);
+            this.tstopen.MaximumSize = new System.Drawing.Size(166, 48);
+            this.tstopen.Name = "tstopen";
+            this.tstopen.ShadowDecoration.Parent = this.tstopen;
+            this.tstopen.Size = new System.Drawing.Size(154, 48);
+            this.tstopen.TabIndex = 55;
+            this.tstopen.Text = "Open Resource";
+            this.tstopen.TextOffset = new System.Drawing.Point(10, 0);
+            this.tstopen.Click += new System.EventHandler(this.tstopen_Click);
+            // 
             // Libre_Navigator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(934, 565);
+            this.Controls.Add(this.tstopen);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.JSONTEST);
             this.Controls.Add(this.ResourceList);
@@ -585,6 +618,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btnExit;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2Button tstopen;
     }
 }
 

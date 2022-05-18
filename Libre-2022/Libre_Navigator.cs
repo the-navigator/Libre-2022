@@ -115,15 +115,25 @@ namespace Libre_2022
             ListViewItem selectOpen = new ListViewItem();
             selectOpen = ResourceList.SelectedItems[0];
             string selectedID = selectOpen.SubItems[0].Text;
+            string selectedName = selectOpen.SubItems[1].Text;
             // string selectedName = selectOpen.SubItems[2].Text;
             //MessageBox.Show(selectOpen.SubItems[0].Text);
-            opnResource.inputData(selectedID);
-            opnResource.OpenFile();
+            opnResource.inputData(selectedID, selectedName);
+           // opnResource.OpenFile();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void tstopen_Click(object sender, EventArgs e)
+        {
+            ListViewItem nc = new ListViewItem();
+            nc = ResourceList.SelectedItems[0];
+            string selectid = nc.SubItems[0].Text;
+            dbConnection.ExtractToFileStream(selectid);
+            MessageBox.Show(dbConnection.nice);
         }
     }
 }

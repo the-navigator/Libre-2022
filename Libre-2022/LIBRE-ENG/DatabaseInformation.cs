@@ -71,6 +71,7 @@ namespace Libre_2022.LIBRE_ENG.DatabaseProperties
         public static string tblclmn_ResourceName { get; set; }
         public static string tblclmn_ResourceAuthor { get; set; }
         public static string tblclmn_ResourceExtension { get; set; }
+        public static string tblclmn_ResourceFull { get; set; }
         public static string tblclmn_ResourceBLOB { get; set; }
 
     }
@@ -85,9 +86,10 @@ namespace Libre_2022.LIBRE_ENG.DatabaseProperties
             DatabaseInformation.Name = jsonFile["DatabaseName"];
             DatabaseTableInformation.databaseName = jsonFile["DatabaseName_Loc"];
             DatabaseTableInformation.TableName = jsonFile["TableName"];
+            DatabaseConnection.DatabaseDirectory = DirectoryPath;
             DatabaseTableInformation.FullNamePath = DirectoryPath + "\\" + DatabaseTableInformation.databaseName;
             DatabaseConnection._databasePath = JSONLocation;
-            DatabaseConnection.DatabaseDirectory = DirectoryPath;
+   
 
             Libre_Navigator.SetResourceDisplayName(DatabaseInformation.GetName());
 
@@ -96,6 +98,7 @@ namespace Libre_2022.LIBRE_ENG.DatabaseProperties
             DatabaseTableInformation.tblclmn_ResourceName = jsonFile["ResourceName"];
             DatabaseTableInformation.tblclmn_ResourceAuthor = jsonFile["AuthorofResource"];
             DatabaseTableInformation.tblclmn_ResourceExtension = jsonFile["ResourceExtension"];
+            DatabaseTableInformation.tblclmn_ResourceFull = jsonFile["ResourceFull"];
             DatabaseTableInformation.tblclmn_ResourceBLOB = jsonFile["BLOB"];
             // DatabaseTableInformation.SetDatabaseName(jsonFile["DatabaseName"]);
         }
